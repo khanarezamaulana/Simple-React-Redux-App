@@ -1,3 +1,5 @@
+import { combineReducers } from 'redux';
+
 const movieReducer = () => {
     return [
         { title: "Captain Marvel", duration: "02:30:00" },
@@ -15,4 +17,9 @@ const movieSelectedReducer = (selectedMovie = null, action) => {
         return selectedMovie;
     }
 }
+
+export default combineReducers({
+    movie: movieReducer,
+    selectedMovie: movieSelectedReducer
+})
  
